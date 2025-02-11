@@ -12,4 +12,5 @@ services:
       - APP_DATABASE_TYPE=pg
       - APP_DATABASE_HOST=postgres
       - APP_DATABASE_USER=postgres
+      - APP_DATABASE_PASSWORD=app123
       - APP_DATABASE_NAME=postgres

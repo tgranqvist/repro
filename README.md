@@ -8,4 +8,8 @@ Steps to reproduce this bug:
 - Without doing any changes build the container: `docker build -t repro/app .`. It works.
 - Uncomment the line in `src/routes/+page.server.ts` and rerun the build. It fails.
 
+One way to fix it, is to add a default for APP_DATABASE_TYPE to the Dockerfile.
+
+Note that the project doesn't even use a database, not needed for reproducing the bug.
+
 To better emulate how I usally run my apps, start the composefile: `docker compose up --build`.

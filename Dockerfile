@@ -1,4 +1,5 @@
 FROM node:22.13.1-alpine3.21 AS build
+#ARG APP_DATABASE_TYPE=pg
 WORKDIR /app
 COPY . .
 RUN npm install && npm run build
