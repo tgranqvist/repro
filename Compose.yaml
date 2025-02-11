@@ -1,0 +1,15 @@
+services:
+  postgres:
+    image: postgres:17.2-alpine3.21
+    environment:
+      - POSTGRES_PASSWORD=app123
+
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    environment:
+      - APP_DATABASE_TYPE=pg
+      - APP_DATABASE_HOST=postgres
+      - APP_DATABASE_USER=postgres
+      - APP_DATABASE_NAME=postgres

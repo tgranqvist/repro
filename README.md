@@ -8,4 +8,4 @@ Steps to reproduce this bug:
 - Without doing any changes build the container: `docker build -t repro/app .`. It works.
 - Uncomment the line in `src/routes/+page.server.ts` and rerun the build. It fails.
 
-To better simulate how I would really run an app like this, start the composefile.
+To better emulate how I usally run my apps, start the composefile: `docker compose up --build`.
